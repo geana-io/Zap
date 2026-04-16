@@ -2,6 +2,7 @@
 
 {{#post}}
 
+{{#if @page.show_title_and_feature_image}}
 <header class="gh-header">
     <h1>{{title}}</h1>
     {{#if feature_image}}
@@ -16,6 +17,7 @@
     />
     {{/if}}
 </header>
+{{/if}}
 
 <section class="gh-content">
     {{content}}
