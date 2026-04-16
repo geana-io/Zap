@@ -399,6 +399,7 @@ ul.nav a:hover {
 /* ---------------------------------------------------------- */
 
 .gh-content {
+    position: relative;
     display: grid;
     /* grid lines are called
      *      full-start, wide-start, main-start
@@ -739,4 +740,46 @@ ul.nav a:hover {
     margin: 40px auto 0;
     border-top: var(--color-border) 1px solid;
     text-align: center;
+}
+
+
+/* Table of Contents
+/* ---------------------------------------------------------- */
+
+.gh-toc > .toc-list {
+    position: relative;
+}
+
+.toc-list {
+    overflow: hidden;
+    list-style: none;
+}
+
+@media (min-width: 1500px) {
+    .gh-sidebar {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin-top: 4vmin;
+        grid-column: wide-start / main-start;
+    }
+
+    .gh-sticky-sidebar {
+        display: flex;
+        flex-direction: column;
+        max-height: calc(100vh - 80px);
+        position: -webkit-sticky;
+        position: sticky;
+        top: 50px;
+    }
+
+    .gh-toc {
+        align-self: stretch;
+        overflow-y: auto;
+        padding: 1px 0 6vmin;
+    }
+}
+
+.gh-toc .is-active-link::before {
+    background-color: var(--color-accent);
 }
