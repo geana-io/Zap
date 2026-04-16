@@ -461,7 +461,7 @@ ul.nav a:hover {
 /* ---------------------------------------------------------- */
 
 .gh-content > * + * {
-    margin-top: 1vmin;
+    margin-top: 2.5rem;
 }
 
 .gh-content > [id] + * {
