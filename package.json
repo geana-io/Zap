@@ -10,7 +10,6 @@
     "scripts": {
         "zip": "bestzip $npm_package_name.zip assets/* partials/* members/* *.hbs package.json",
         "test": "npx gscan .",
-        "pretest": "npm run build"
     },
     "author": {
         "name": "Ghost Foundation",
