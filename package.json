@@ -5,6 +5,9 @@
     "engines": {
         "ghost": ">=5.0.0"
     },
+    "author": {
+        "email": "ab@geana.io"
+    },
     "license": "MIT",
     "scripts": {
         "test": "npx gscan ."
