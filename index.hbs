@@ -2,10 +2,11 @@
 
 <div class="gh-container">
     <div class="gh-postfeed">
-        {{#foreach posts visibility="all"}}
+        {{#foreach posts}}
         <a class="{{post_class}}" href="{{url}}">
-            <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM, YYYY"}}</time> - <span>{{title}}</span>
+            <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> - <span>{{title}}</span>
         </a>
         {{/foreach}}
     </div>
+    {{pagination}}
 </div>

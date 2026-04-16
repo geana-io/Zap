@@ -4,19 +4,18 @@
 
 <header class="gh-header">
     {{#if feature_image}}
-    <img
+    <img class="home-feature-image"
         srcset="{{img_url feature_image size="s"}} 300w,
                 {{img_url feature_image size="m"}} 600w,
-                {{img_url feature_image size="l"}} 1000w,
-                {{img_url feature_image size="xl"}} 2000w"
-        sizes="(min-width: 1000px) 1000px"
-        src="{{img_url feature_image size="l"}}"
+                {{img_url feature_image size="l"}} 1000w"
+        sizes="500px"
+        src="{{img_url feature_image size="m"}}"
         alt="{{title}}"
     />
     {{/if}}
 </header>
 
-<section class="gh-content" style="text-align: center">
+<section class="gh-content home-content">
     {{content}}
 </section>
 

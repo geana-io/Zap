@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>{{meta_title}}</title>
-
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.36.4/tocbot.min.css" integrity="sha512-/ANQiHMqpRl+E0zEAd250N21OOmJsYbhiJWY0Y8yG0TII47yZn1+gDNobMlf+h/FTyImprLXYgXbX3bCYyq/vg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     {{ghost_head}}
@@ -28,18 +26,18 @@
     {{{body}}}
 </main>
 
-<footer class="page-footer">
-</footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.36.4/tocbot.min.js" integrity="sha512-BZUSsJAPNtkd+kdY/bD7hvQKZ5zlgWt++KGy/Pa/5uEJNgs0jZ6JaX6MuclRUanowuxmhb5S3LRPEa3QmrUVfA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        tocbot.init({
-            // Where to render the table of contents.
-            tocSelector: '.gh-toc',
-            // Where to grab the headings to build the table of contents.
-            contentSelector: '.gh-content',
-            // Which headings to grab inside of the contentSelector element.
-            headingSelector: 'h1, h2, h3, h4',
-        });
+        if (document.querySelector('.gh-toc')) {
+            tocbot.init({
+                // Where to render the table of contents.
+                tocSelector: '.gh-toc',
+                // Where to grab the headings to build the table of contents.
+                contentSelector: '.gh-content',
+                // Which headings to grab inside of the contentSelector element.
+                headingSelector: 'h1, h2, h3, h4',
+            });
+        }
     </script>
     {{ghost_foot}}
 </body>
